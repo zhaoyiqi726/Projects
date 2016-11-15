@@ -38,7 +38,7 @@ namespace 变电站状态检修专业巡检系统
                     CommonUtility.SaveUserName(cobUser.Text.Trim());
                     User currentUser = LoginUtility.GetUser(cobUser.Text.Trim());
                     Close();
-                    new RoutingWindow(currentUser).ShowDialog();
+                    new RoutingPlanWindow(currentUser).ShowDialog();
                 }
             };
 

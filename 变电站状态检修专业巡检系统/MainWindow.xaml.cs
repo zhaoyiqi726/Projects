@@ -48,26 +48,9 @@ namespace 变电站状态检修专业巡检系统
 
         private void InitializeWebBrowser()
         {
-            wbMap.Source = new Uri(Environment.CurrentDirectory + "/Map/BMap.html");
+            wbMap.Navigate(new Uri(Environment.CurrentDirectory + "/Map/BMap.html", UriKind.RelativeOrAbsolute));
             var help = new ObjectForScriptingHelper(this);
             wbMap.ObjectForScripting = help;
-
-
-            //wbMap.InvokeScript("alert('a');");
-            wbMap.LoadCompleted += (s, e) =>
-            {
-                Cursor = Cursors.Wait;
-                HTMLDocument dom = (HTMLDocument)wbMap.Document;
-                var a = dock.Width;
-                dom.getElementById("map").setAttribute("style", $"width:{wbMap.Width}px;height:{wbMap.Height}px;border:#ccc solid 1px;font-size:12px");
-                //IHTMLElementCollection labels = dom.getElementsByTagName("label");
-                //foreach (IHTMLElement label in dom.getElementsByTagName("label"))
-                //{
-                //    MessageBox.Show(label.innerHTML);
-                //}
-                //wbMap.Refresh();
-                Cursor = null;
-            };
         }
 
         private void Login(object sender, MouseButtonEventArgs e)

@@ -1,4 +1,4 @@
-﻿<Window x:Class="变电站状态检修专业巡检系统.RoutingWindow"
+﻿<Window x:Class="变电站状态检修专业巡检系统.HistoryWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -16,9 +16,6 @@
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
             <Button Name="btnClose" Height="75" Width="75" Content="关闭" Margin="10" FontSize="20"></Button>
-            <Button Name="btnFinishRoute" Height="75" Width="75" Content="完成&#13;巡检" Margin="10" FontSize="20"></Button>
-            <Button Name="btnBasicInfo" Height="75" Width="75" Content="基础&#13;信息" Margin="10" FontSize="20"></Button>
         </StackPanel>
-        <WebBrowser Grid.Row="1" Name="wbMap"></WebBrowser>
     </Grid>
 </Window>

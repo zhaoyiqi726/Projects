@@ -8,7 +8,7 @@ namespace 变电站状态检修专业巡检系统
 {
     public class PlanUtility
     {
-        public static List<Plan> GetPlans()
+        public static List<Plan> GetPlans(bool IsFirstTime = true)
         {
             List<Plan> list = new List<Plan>();
             var datas = SqlHelper.GetDT("SELECT * FROM t_plan");
@@ -33,7 +33,13 @@ namespace 变电站状态检修专业巡检系统
                 plan.Remark = datas.Rows[i]["REMARK"].ToString();
                 list.Add(plan);
             }
+            SavePlans(list);
             return list;
+        }
+
+        public static void SavePlans(List<Plan> plans)
+        {
+
         }
     }
 }

@@ -15,16 +15,13 @@ using System.Windows.Shapes;
 namespace 变电站状态检修专业巡检系统
 {
     /// <summary>
-    /// RoutingWindow.xaml 的交互逻辑
+    /// HistoryWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class RoutingWindow : Window
+    public partial class HistoryWindow : Window
     {
-        public RoutingWindow()
+        public HistoryWindow()
         {
             InitializeComponent();
-
-            wbMap.Source = new Uri(Environment.CurrentDirectory + "/Map/布拉格.html");
-
         }
     }
 }

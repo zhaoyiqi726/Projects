@@ -15,16 +15,21 @@ using System.Windows.Shapes;
 namespace 变电站状态检修专业巡检系统
 {
     /// <summary>
-    /// RoutingWindow.xaml 的交互逻辑
+    /// RoutingRecordWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class RoutingWindow : Window
+    public partial class RoutingRecordWindow : Window
     {
-        public RoutingWindow()
+        public RoutingRecordWindow(Record record)
         {
             InitializeComponent();
+            btnClose.Click += CloseWindow;
+            btnCancel.Click += CloseWindow;
+            txtRecordID.Text = record.RecordNo.ToString();
+        }
 
-            wbMap.Source = new Uri(Environment.CurrentDirectory + "/Map/布拉格.html");
-
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
