@@ -41,27 +41,27 @@ namespace 变电站状态检修专业巡检系统
         /// <summary>
         /// 延迟提醒A
         /// </summary>
-        public string DelayTimeA { get; set; }
+        public string DelayAlertTimeA { get; set; }
 
         /// <summary>
         /// 延迟提醒B
         /// </summary>
-        public string DelayTimeB { get; set; }
+        public string DelayAlertTimeB { get; set; }
 
         /// <summary>
         /// 提醒人
         /// </summary>
-        public string DelayUser { get; set; }
+        public string DelayedReminder { get; set; }
 
         /// <summary>
         /// 提醒方式
         /// </summary>
-        public char DelayType { get; set; }
+        public string DelayAlertType { get; set; }
 
         /// <summary>
         /// 任务状态
         /// </summary>
-        public char PlanStatus { get; set; }
+        public string PlanStatus { get; set; }
 
         /// <summary>
         /// 所属机构编号

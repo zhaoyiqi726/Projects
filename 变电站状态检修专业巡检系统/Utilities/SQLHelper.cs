@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace 变电站状态检修专业巡检系统
 {
     class SqlHelper
     {
-        static private string connectionString = "server=qdm176963284.my3w.com;uid=qdm176963284;pwd=1thagainIdoy;database=qdm176963284_db";
-
+        static private string connectionString = //"server=qdm176963284.my3w.com;uid=qdm176963284;pwd=1thagainIdoy;database=qdm176963284_db";
+            ConfigurationManager.AppSettings["connStr"].ToString();
         static public bool IsConnected()
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))

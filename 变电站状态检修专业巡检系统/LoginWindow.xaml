@@ -24,7 +24,7 @@
                 <Label Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Content="密   码：" FontSize="30" Margin="5"></Label>
                 <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Content="站   点：" FontSize="30" Margin="5"></Label>
 
-                <TextBox Grid.Row="0" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="txtUser" FontSize="30" Margin="5"></TextBox>
+                <ComboBox Grid.Row="0" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="cobUser" FontSize="30" Margin="5" IsEditable="True"></ComboBox>
                 <TextBox Grid.Row="1" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="txtPassword" FontSize="30" Margin="5"></TextBox>
                 <TextBox IsEnabled="False" Grid.Row="2" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="txtState" FontSize="30" Margin="5"></TextBox>
             </Grid>

@@ -22,8 +22,25 @@
             <Button Name="btnHistory" Height="75" Width="75" Content="历史&#13;记录" Margin="10" FontSize="20"></Button>
             <Button Name="btnSpecial" Height="75" Width="75" Content="特殊&#13;巡检" Margin="10" FontSize="20"></Button>
         </StackPanel>
-        <DataGrid Grid.Row="1">
-            
+        <DataGrid Grid.Row="1" Name="dgRoutingPlan" FontSize="20" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="计划编号" Binding="{Binding PlanID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="所属机构" Binding="{Binding DepartmentName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="巡检计划名称" Binding="{Binding PlanName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="巡检任务" Binding="{Binding RoutingTaskID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="巡检时机" Binding="{Binding RoutingOpportunity}"></DataGridTextColumn>
+                <DataGridTextColumn Header="巡检时间" Binding="{Binding RoutingTime}"></DataGridTextColumn>
+                <DataGridTextColumn Header="延迟提醒A" Binding="{Binding DelayAlertTimeA}"></DataGridTextColumn>
+                <DataGridTextColumn Header="延迟提醒B" Binding="{Binding DelayAlertTimeB}"></DataGridTextColumn>
+                <DataGridTextColumn Header="提醒人" Binding="{Binding DelayedReminder}"></DataGridTextColumn>
+                <DataGridTextColumn Header="提醒方式" Binding="{Binding DelayAlertType}"></DataGridTextColumn>
+                <DataGridTextColumn Header="任务状态" Binding="{Binding PlanStatus}"></DataGridTextColumn>
+                <DataGridTextColumn Header="所属机构编号" Binding="{Binding DepartmentID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="是否特殊巡检" Binding="{Binding IsSpecialRoute}"></DataGridTextColumn>
+                <DataGridTextColumn Header="特殊巡检ID" Binding="{Binding SpecialRouteID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="巡检类别ID" Binding="{Binding RoutingTypeID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="备注" Binding="{Binding Remark}"></DataGridTextColumn>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Window>

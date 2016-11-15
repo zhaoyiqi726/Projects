@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +25,21 @@ namespace 变电站状态检修专业巡检系统
             InitializeComponent();
 
             txtState.Text = name;
+            cobUser.ItemsSource = CommonUtility.GetLocalUserName();
 
             btnLogin.Click += (s, e) => 
             {
-
+                if (cobUser.Text == string.Empty || txtPassword.Text == string.Empty)
+                {
+                    return;
+                }
+                if (LoginUtility.CheckPassword(cobUser.Text, txtPassword.Text))
+                {
+                    CommonUtility.SaveUserName(cobUser.Text.Trim());
+                    User currentUser = LoginUtility.GetUser(cobUser.Text.Trim());
+                    Close();
+                    new RoutingWindow(currentUser).ShowDialog();
+                }
             };
 
             btnExit.Click += (s, e) =>

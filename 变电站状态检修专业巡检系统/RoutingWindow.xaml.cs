@@ -19,9 +19,16 @@ namespace 变电站状态检修专业巡检系统
     /// </summary>
     public partial class RoutingWindow : Window
     {
-        public RoutingWindow()
+        public RoutingWindow(User currentUser)
         {
             InitializeComponent();
+
+            btnClose.Click += (s, e) => 
+            {
+                Close();
+            };
+
+            dgRoutingPlan.ItemsSource = PlanUtility.GetPlans();
         }
     }
 }

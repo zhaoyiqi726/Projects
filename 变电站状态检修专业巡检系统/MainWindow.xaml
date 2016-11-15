@@ -19,7 +19,7 @@
             <Button Name="btnClose" Height="75" Width="75" Content="关闭" Margin="10" FontSize="20"></Button>
             <Button Name="btnLogin" Height="75" Width="75" Content="登录" Margin="10" FontSize="20"></Button>
         </StackPanel>
-        <DockPanel Grid.Row="1">
+        <DockPanel Grid.Row="1" Name="dock">
             <DockPanel.Resources>
                 <HierarchicalDataTemplate DataType="{x:Type local:Department}" ItemsSource="{Binding Departments}">
                     <StackPanel Orientation="Horizontal">
@@ -29,7 +29,7 @@
             </DockPanel.Resources>
             <TreeView Name="tvDepartments" Width="400"></TreeView>
             <GridSplitter></GridSplitter>
-            
+            <WebBrowser Name="wbMap" Margin="5"></WebBrowser>
         </DockPanel>
         
     </Grid>
