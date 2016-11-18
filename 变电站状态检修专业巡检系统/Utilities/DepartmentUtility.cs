@@ -14,15 +14,17 @@ namespace 变电站状态检修专业巡检系统
             var datas = SqlHelper.GetDT("SELECT * FROM t_sys_dept");
             for (int i = 0; i < datas.Rows.Count; i++)
             {
-                Department department = new Department();
-                department.DepartmentID = int.Parse(datas.Rows[i]["DEPT_ID"].ToString());
-                department.ParentDepartmentID = int.Parse(datas.Rows[i]["P_ID"].ToString());
-                department.DepartmentName = datas.Rows[i]["DEPT_NAME"].ToString();
-                department.Longitude = double.Parse(datas.Rows[i]["LNG"].ToString());
-                department.Latitude = double.Parse(datas.Rows[i]["LAT"].ToString());
-                department.Description = datas.Rows[i]["DESCRIPTION"].ToString();
-                department.DepartmentNo = datas.Rows[i]["DEPT_NO"].ToString();
-                department.DepartmentLeader = datas.Rows[i]["DEPT_LEADER"].ToString();
+                Department department = new Department()
+                {
+                    DepartmentID = int.Parse(datas.Rows[i]["DEPT_ID"].ToString()),
+                    ParentDepartmentID = int.Parse(datas.Rows[i]["P_ID"].ToString()),
+                    DepartmentName = datas.Rows[i]["DEPT_NAME"].ToString(),
+                    Longitude = double.Parse(datas.Rows[i]["LNG"].ToString()),
+                    Latitude = double.Parse(datas.Rows[i]["LAT"].ToString()),
+                    Description = datas.Rows[i]["DESCRIPTION"].ToString(),
+                    DepartmentNo = datas.Rows[i]["DEPT_NO"].ToString(),
+                    DepartmentLeader = datas.Rows[i]["DEPT_LEADER"].ToString()
+                };
                 list.Add(department);
             }
             return list;

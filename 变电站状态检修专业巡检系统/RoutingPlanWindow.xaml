@@ -21,6 +21,7 @@
             <Button Name="btnCancel" Height="75" Width="75" Content="取消" Margin="10" FontSize="20"></Button>
             <Button Name="btnHistory" Height="75" Width="75" Content="历史&#13;记录" Margin="10" FontSize="20"></Button>
             <Button Name="btnSpecial" Height="75" Width="75" Content="特殊&#13;巡检" Margin="10" FontSize="20"></Button>
+            <Button Name="btnFile" Height="75" Width="75" Content="文件" Margin="10" FontSize="20"></Button>
         </StackPanel>
         <DataGrid Grid.Row="1" Name="dgRoutingPlan" FontSize="20" AutoGenerateColumns="False">
             <DataGrid.Columns>

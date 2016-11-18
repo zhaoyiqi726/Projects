@@ -29,7 +29,7 @@ namespace 变电站状态检修专业巡检系统
             }
         }
 
-        async static public Task<bool> RunSql(string sql, params MySqlParameter[] parameters)
+        async static public Task<bool> RunSqlAsync(string sql, params MySqlParameter[] parameters)
         {
             using (MySqlConnection con = new MySqlConnection(connectionString))
             {

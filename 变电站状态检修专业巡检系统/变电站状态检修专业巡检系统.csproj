@@ -43,9 +43,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\RFID.dll</HintPath>
     </Reference>
+    <Reference Include="Svg2Xaml, Version=0.2.6166.30232, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Svg2Xaml.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +70,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddUserWindow.xaml.cs">
+      <DependentUpon>AddUserWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileWindow.xaml.cs">
+      <DependentUpon>FileWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HistoryWindow.xaml.cs">
       <DependentUpon>HistoryWindow.xaml</DependentUpon>
     </Compile>
@@ -80,6 +91,9 @@
     <Compile Include="RoutingRecordWindow.xaml.cs">
       <DependentUpon>RoutingRecordWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RoutingSpecialRecordWindow.xaml.cs">
+      <DependentUpon>RoutingSpecialRecordWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RoutingWindow.xaml.cs">
       <DependentUpon>RoutingWindow.xaml</DependentUpon>
     </Compile>
@@ -94,6 +108,15 @@
     <Compile Include="Utilities\RFIDUtility.cs" />
     <Compile Include="Utilities\SQLHelper.cs" />
     <Compile Include="Utilities\DepartmentUtility.cs" />
+    <Compile Include="Utilities\SvgUtility.cs" />
+    <Page Include="AddUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FileWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HistoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +145,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RoutingSpecialRecordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RoutingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,6 +172,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -169,9 +197,17 @@
     <Content Include="Map\BMap.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Map\布拉格.html">
+    <Content Include="SVG\临河地图2-26.svg" />
+    <Content Include="SVG\前锋3-17.svg" />
+    <Content Include="SVG\吉祥.svg" />
+    <Content Include="SVG\布拉格.svg" />
+    <Content Include="SVG\沙德格.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SVG\隆兴昌3-12.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RoutingFile\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

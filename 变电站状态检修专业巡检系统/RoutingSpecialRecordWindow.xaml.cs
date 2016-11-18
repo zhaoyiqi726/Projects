@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace 变电站状态检修专业巡检系统
 {
     /// <summary>
-    /// RoutingRecordWindow.xaml 的交互逻辑
+    /// RoutingSpecialRecordWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class RoutingRecordWindow : Window
+    public partial class RoutingSpecialRecordWindow : Window
     {
-        public RoutingRecordWindow(Record record, bool openFromRoutingWindow = false)
+        public RoutingSpecialRecordWindow(Record record, bool openFromRoutingWindow = false)
         {
             InitializeComponent();
             btnClose.Click += CloseWindow;
@@ -46,9 +46,6 @@ namespace 变电站状态检修专业巡检系统
             txtWeather.Text = record.Weather;
             txtRouter.Text = record.UserName;
             txtLeader.Text = record.Leader;
-            txtTemperature.Text = record.Temperature;
-            txtRemark.Text = record.Remark;
-            
 
             btnRouter.Click += (s, e) =>
             {
@@ -64,6 +61,7 @@ namespace 变电站状态检修专业巡检系统
                 new AddUserWindow(true, SetLeaders, names).ShowDialog();
             };
         }
+
 
         private void CloseWindow(object sender, RoutedEventArgs e)
         {

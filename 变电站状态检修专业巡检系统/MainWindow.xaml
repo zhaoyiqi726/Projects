@@ -31,6 +31,5 @@
             <GridSplitter></GridSplitter>
             <WebBrowser Name="wbMap" Margin="5"></WebBrowser>
         </DockPanel>
-        
     </Grid>
 </Window>

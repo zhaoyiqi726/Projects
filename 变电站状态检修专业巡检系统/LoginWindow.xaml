@@ -25,8 +25,8 @@
                 <Label Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Content="站   点：" FontSize="30" Margin="5"></Label>
 
                 <ComboBox Grid.Row="0" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="cobUser" FontSize="30" Margin="5" IsEditable="True"></ComboBox>
-                <TextBox Grid.Row="1" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="txtPassword" FontSize="30" Margin="5"></TextBox>
-                <TextBox IsEnabled="False" Grid.Row="2" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="txtState" FontSize="30" Margin="5"></TextBox>
+                <PasswordBox Grid.Row="1" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="txtPassword" FontSize="30" Margin="5"></PasswordBox>
+                <ComboBox Grid.Row="2" Grid.Column="1" Width="300" VerticalAlignment="Center" HorizontalAlignment="Left" Name="cobState" FontSize="30" Margin="5"></ComboBox>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>

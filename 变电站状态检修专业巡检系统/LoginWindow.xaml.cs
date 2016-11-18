@@ -20,20 +20,26 @@ namespace 变电站状态检修专业巡检系统
     /// </summary>
     public partial class LoginWindow : Window
     {
-        public LoginWindow(string name)
+        public LoginWindow(string name = null)
         {
             InitializeComponent();
 
-            txtState.Text = name;
+            cobState.ItemsSource = DepartmentUtility.GetDepartments();
+            cobState.DisplayMemberPath = "DepartmentName";
+            if (null != name)
+            {
+                cobState.Text = name;
+            }
+
             cobUser.ItemsSource = CommonUtility.GetLocalUserName();
 
             btnLogin.Click += (s, e) => 
             {
-                if (cobUser.Text == string.Empty || txtPassword.Text == string.Empty)
+                if (cobUser.Text == string.Empty || txtPassword.Password == string.Empty)
                 {
                     return;
                 }
-                if (LoginUtility.CheckPassword(cobUser.Text, txtPassword.Text))
+                if (LoginUtility.CheckPassword(cobUser.Text, txtPassword.Password))
                 {
                     CommonUtility.SaveUserName(cobUser.Text.Trim());
                     User currentUser = LoginUtility.GetUser(cobUser.Text.Trim());

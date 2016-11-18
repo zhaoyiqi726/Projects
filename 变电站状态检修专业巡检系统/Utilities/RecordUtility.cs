@@ -26,7 +26,7 @@ namespace 变电站状态检修专业巡检系统
             record.Remark = datas["REMARK"].ToString();
             record.DepartmentName = datas["DEPT_NAME"].ToString();
             record.DepartmentID = datas["DEPT_ID"].ToString().ToInt();
-            record.RecordNo = datas["DEPT_NAME"].ToString();
+            record.RecordNo = datas["ROUTING_RECORD_NO"].ToString();
             record.IsSpecial = "1" == datas["SPECIAL"].ToString();
             record.Finish = datas["FINISH"].ToString();
             return record;

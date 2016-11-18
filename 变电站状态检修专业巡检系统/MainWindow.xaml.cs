@@ -38,6 +38,11 @@ namespace 变电站状态检修专业巡检系统
                     Close();
                 }
             };
+
+            btnLogin.Click += (s, e) => 
+            {
+                new LoginWindow().ShowDialog();
+            };
         }
 
         private void InitializeDepartment()
@@ -55,7 +60,8 @@ namespace 变电站状态检修专业巡检系统
 
         private void Login(object sender, MouseButtonEventArgs e)
         {
-            new LoginWindow((sender as TextBlock).Text).ShowDialog();
+            string name = (sender as TextBlock).Text;
+            new LoginWindow(name).ShowDialog();
         }
     }
 }

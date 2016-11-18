@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Svg2Xaml;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,12 +21,24 @@ namespace 变电站状态检修专业巡检系统
     /// </summary>
     public partial class RoutingWindow : Window
     {
-        public RoutingWindow()
+        public RoutingWindow(string map, Record record)
         {
             InitializeComponent();
 
-            wbMap.Source = new Uri(Environment.CurrentDirectory + "/Map/布拉格.html");
+            btnBasicInfo.Click += (s, e) => 
+            {
+                new RoutingRecordWindow(record).ShowDialog();
+            };
 
+            btnClose.Click += (s, e) => 
+            {
+                Close();
+            };
+
+            using (FileStream fs = new FileStream($"SVG/{map}.svg", FileMode.Open, FileAccess.Read))
+            {
+                imgMap.Source = SvgReader.Load(fs);
+            }
         }
     }
 }

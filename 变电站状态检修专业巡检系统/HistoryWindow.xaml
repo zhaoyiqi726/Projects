@@ -17,5 +17,6 @@
         <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
             <Button Name="btnClose" Height="75" Width="75" Content="关闭" Margin="10" FontSize="20"></Button>
         </StackPanel>
+        <Image Grid.Row="1" Name="imgMap"></Image>
     </Grid>
 </Window>

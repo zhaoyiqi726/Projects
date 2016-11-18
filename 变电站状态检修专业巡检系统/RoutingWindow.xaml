@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:变电站状态检修专业巡检系统"
+        xmlns:svg="clr-namespace:Svg2Xaml;assembly=Svg2Xaml"
         mc:Ignorable="d" Height="800" Width="1200" WindowState="Maximized" WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
@@ -19,6 +20,6 @@
             <Button Name="btnFinishRoute" Height="75" Width="75" Content="完成&#13;巡检" Margin="10" FontSize="20"></Button>
             <Button Name="btnBasicInfo" Height="75" Width="75" Content="基础&#13;信息" Margin="10" FontSize="20"></Button>
         </StackPanel>
-        <WebBrowser Grid.Row="1" Name="wbMap"></WebBrowser>
+        <Image Grid.Row="1" Name="imgMap"></Image>
     </Grid>
 </Window>
